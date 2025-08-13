@@ -18,6 +18,7 @@ void function2(){
 void function3(){
     for (int i = 0; i < 200; i++){
         std::cout << "C";
+
     }
     
 }
