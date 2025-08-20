@@ -5,22 +5,16 @@ void function1(char sys){
     for (int i = 0; i < 200; i++){
         std::cout << sys;
     }
-    
 }
-
 void function2(){
     for (int i = 0; i < 200; i++){
         std::cout << "B";
     }
-    
 }
-
 void function3(){
     for (int i = 0; i < 200; i++){
         std::cout << "C";
-
     }
-    
 }
 
 int main(){
