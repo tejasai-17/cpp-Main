@@ -109,24 +109,49 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// #include <thread>
+// using namespace std;
+
+// void fun1(){
+//     int a;
+//     int b;
+//     std::cout << "Enter the value of a: ";
+//     cin >> a;
+//     std::cout << "Enter the value of b: ";
+//     cin >> b;
+//     cout << "SUM : " << a+b << "\n";
+// }
+
+// int main(){
+
+//     thread worker1(fun1);
+//     worker1.join();
+
+//     return 0;
+// }
+
 #include <iostream>
-#include <thread>
-using namespace std;
+#include <vector>
 
-void fun1(){
-    int a;
-    int b;
-    std::cout << "Enter the value of a: ";
-    cin >> a;
-    std::cout << "Enter the value of b: ";
-    cin >> b;
-    cout << "SUM : " << a+b << "\n";
-}
+int main() {
+    std::vector<int> nums = {1, 2, 3, 4, 5};
 
-int main(){
+    for (size_t i = 0; i < nums.size(); ) {
+        std::cout << "Element: " << nums[i] << "\n";
+        if (nums[i] == 3) {
+            nums.erase(nums.begin()+i);
+        }
+        else{
+            i++;
+        }
+    }
 
-    thread worker1(fun1);
-    worker1.join();
+    std::cout << "Final vector elements: ";
+    for (int num : nums) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
 
     return 0;
 }
